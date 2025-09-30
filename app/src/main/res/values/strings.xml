@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">OnlyFitness</string>
+    <string name="web_client_id">789146218834-qs67q1kqqj0s9avbti2ohn0klbuq8qnr.apps.googleusercontent.com</string>
+
+    <!-- Login -->
+    <string name="login_text">Sign-in</string>
+    <string name="login_fill_form">Please fill the form to continue</string>
+    <string name="login_email_or_username_field">E-mail or Username</string>
+    <string name="login_password_field">Password</string>
+    <string name="login_sign_in_button">Sign-in</string>
+    <string name="login_or_continue_with">or continue with</string>
+    <string name="login_sign_in_with_google">Sign-in with Google</string>
+    <string name="login_do_not_have_an_account">Don\'t have an account ? Click here…</string>
+    <string name="login_failed">Sign-in failed</string>
+
+    <!-- Register -->
+    <string name="register_back">Back</string>
+    <string name="register_text">Register</string>
+    <string name="register_fill_form">Please fill the form to create an account</string>
+    <string name="register_full_name_field">Full name</string>
+    <string name="register_username_field">Username</string>
+    <string name="register_email_field">E-mail</string>
+    <string name="register_password_field">Password</string>
+    <string name="register_button">Register</string>
+    <string name="register_failed">Registration failed</string>
+
+    <!-- Home -->
+    <string name="home_available_trainers">Available trainers</string>
+    <string name="home_search_name_username_placeholder">Search by name or username…</string>
+    <string name="home_search_location_placeholder">Search by location…</string>
+
+    <!-- Chat -->
+    <string name="chat_text">Chats</string>
+    <string name="chat_send_message_placeholder">Send message…</string>
+
+    <!-- Profile -->
+    <string name="profile_picture_content_description">User profile picture</string>
+    <string name="profile_edit_profile">Edit profile</string>
+    <string name="profile_subscribed">Subscribed</string>
+    <string name="profile_subscriptions">Subscriptions</string>
+
+    <!-- EditProfile -->
+    <string name="edit_profile_title">Edit profile</string>
+    <string name="edit_profile_change_photo">Change photo</string>
+    <string name="edit_profile_quick_info">Quick info</string>
+    <string name="edit_profile_personal_data">Personal data</string>
+    <string name="edit_profile_description">Trainer description</string>
+    <string name="edit_profile_full_name_label">Full name</string>
+    <string name="edit_profile_username_label">Username</string>
+    <string name="edit_profile_location_label">Location</string>
+    <string name="edit_profile_role_label">Role</string>
+    <string name="edit_profile_works_with_label">Works with</string>
+    <string name="edit_profile_available_label">Availability</string>
+    <string name="edit_profile_role_trainer_text">I am a trainer</string>
+    <string name="edit_profile_role_client_text">I am a client</string>
+    <string name="edit_profile_works_with_male_female_text">Male &amp; Female</string>
+    <string name="edit_profile_works_with_male_text">Male</string>
+    <string name="edit_profile_works_with_female_text">Female</string>
+    <string name="edit_profile_available_online_text">Online</string>
+    <string name="edit_profile_available_onsite_text">On-site</string>
+    <string name="edit_profile_available_online_onsite_text">Online &amp; On-site</string>
+    <string name="edit_profile_change_description">Change description</string>
+
+    <!-- ChangePersonalData -->
+    <string name="change_personal_data_title_full_name">Full name</string>
+    <string name="change_personal_data_title_username">Username</string>
+    <string name="change_personal_data_title_location">Location</string>
+    <string name="change_personal_data_title_role">Role</string>
+    <string name="change_personal_data_title_works_with">Works with</string>
+    <string name="change_personal_data_title_available">Available</string>
+    <string name="change_personal_data_title_about_me">About me</string>
+    <string name="change_personal_data_full_name_text">Enter new full name:</string>
+    <string name="change_personal_data_username_text">Enter new username:</string>
+    <string name="change_personal_data_location_text">Enter new location:</string>
+    <string name="change_personal_data_role_text">Change role:</string>
+    <string name="change_personal_data_works_with_text">I am working with:</string>
+    <string name="change_personal_data_available_text">I am available:</string>
+    <string name="change_personal_data_about_me_text">Change about me:</string>
+    <string name="change_personal_data_full_name_label">Full name</string>
+    <string name="change_personal_data_username_label">Username</string>
+    <string name="change_personal_data_location_label">Location</string>
+    <string name="change_personal_data_role_label">I am a trainer</string>
+    <string name="change_personal_data_location_button_text">Get my current location</string>
+    <string-array name="worksWithValues">
+        <item>Male &amp; Female</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="availableValues">
+        <item>Online</item>
+        <item>On-site</item>
+        <item>Online &amp; On-site</item>
+    </string-array>
+
+    <!-- Notifications -->
+    <string name="notifications_text">Notifications</string>
+
+    <!-- NotificationRepo -->
+    <string name="notification_repo_subscribe_title_subscriber">New subscription</string>
+    <string name="notification_repo_subscribe_text_subscriber">User \"%s\" has subscribed to you.</string>
+    <string name="notification_repo_subscribe_title_trainer">Successful subscription</string>
+    <string name="notification_repo_subscribe_text_trainer">You have successfully subscribed to \"%s\".</string>
+
+    <!-- TrainerInfo -->
+    <string name="trainer_info_top_bar">Trainer info for %s</string>
+    <string name="trainer_info_send_message">Send message</string>
+    <string name="trainer_info_subscribe">Subscribe</string>
+    <string name="trainer_info_subscribers_count">Subscribers: %d</string>
+    <string name="trainer_info_genders_male">Works with: Male</string>
+    <string name="trainer_info_genders_female">Works with: Female</string>
+    <string name="trainer_info_genders_male_female">Works with: Male &amp; Female</string>
+    <string name="trainer_info_availability_online">Available: Online</string>
+    <string name="trainer_info_availability_onsite">Available: On-site</string>
+    <string name="trainer_info_availability_online_onsite">Available: Online &amp; On-site</string>
+    <string name="trainer_info_description">Description</string>
+    <string name="trainer_info_about_me">About me:</string>
+    <string name="trainer_info_certifications_licenses">Certifications &amp; Licenses:</string>
+</resources>
