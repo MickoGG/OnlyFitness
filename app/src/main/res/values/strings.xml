@@ -26,8 +26,12 @@
 
     <!-- Home -->
     <string name="home_available_trainers">Available trainers</string>
+    <string name="home_disable_text">Disable</string>
     <string name="home_search_name_username_placeholder">Search by name or username…</string>
     <string name="home_search_location_placeholder">Search by location…</string>
+    <string name="home_works_with_text">Works with: </string>
+    <string name="home_available_text">Available: </string>
+    <string name="home_reset_filter_text">Reset</string>
 
     <!-- Chat -->
     <string name="chat_text">Chats</string>

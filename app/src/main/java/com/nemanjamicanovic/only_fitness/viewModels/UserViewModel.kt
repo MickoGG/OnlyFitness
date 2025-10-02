@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.net.Uri
 import android.util.Base64
-import android.util.Log
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.core.content.ContextCompat
@@ -36,6 +35,10 @@ import java.util.Locale
 import javax.inject.Inject
 
 
+data class HomeRefreshUiState(
+    val isRefreshing: Boolean = false
+)
+
 @HiltViewModel
 class UserViewModel @Inject constructor(
     private val userRepo: UserRepo
@@ -49,6 +52,9 @@ class UserViewModel @Inject constructor(
 
     private var _trainers = MutableStateFlow<List<User>>(emptyList())
     val trainers = _trainers.asStateFlow()
+
+    private val _homeRefreshUiState = MutableStateFlow(HomeRefreshUiState())
+    val homeRefreshUiState = _homeRefreshUiState.asStateFlow()
 
     private var onLoginOrRegisterDone = false
 
@@ -82,9 +88,11 @@ class UserViewModel @Inject constructor(
         }
     }
 
-    private fun getTrainers(): Task<QuerySnapshot> {
+    fun getTrainers(): Task<QuerySnapshot> {
+        _homeRefreshUiState.update { it.copy(isRefreshing = true) }
         return userRepo.getTrainers().addOnSuccessListener { result ->
             _trainers.value = result.toObjects<User>().filter { user -> user.email != Firebase.auth.currentUser!!.email }
+            _homeRefreshUiState.update { it.copy(isRefreshing = false) }
         }
     }
 

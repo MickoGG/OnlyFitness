@@ -7,9 +7,11 @@ import com.google.firebase.firestore.AggregateSource
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.ktx.Firebase
 import com.nemanjamicanovic.only_fitness.database.Database
 import com.nemanjamicanovic.only_fitness.database.dao.SubscribeDao
+import com.nemanjamicanovic.only_fitness.database.models.Chat
 import com.nemanjamicanovic.only_fitness.database.models.Subscribe
 import com.nemanjamicanovic.only_fitness.database.models.User
 import javax.inject.Inject
@@ -50,6 +52,16 @@ class SubscribeRepo @Inject constructor(val db: Database) : SubscribeDao {
                     subscriptionFromRef = collectionUser.document(Firebase.auth.currentUser!!.uid)
                 )
             )
+            .addOnSuccessListener {
+                subscribedTo.get().addOnSuccessListener { documentSnapshot ->
+                    subscribedTo.set(
+                        mapOf(
+                            User::subscribers.name to documentSnapshot[User::subscribers.name] as Long + 1
+                        ),
+                        SetOptions.merge()
+                    )
+                }
+            }
     }
 
 }

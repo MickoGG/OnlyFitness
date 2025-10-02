@@ -104,9 +104,9 @@ class ChatRepo @Inject constructor(val db: Database) : ChatDao {
         val chatRef = collectionChat.document(chatId)
 
         chatRef.collection(Message::class.simpleName!!)
-            .whereEqualTo("from", msg.from)
-            .whereEqualTo("text", msg.text)
-            .whereEqualTo("timestamp", msg.timestamp)
+            .whereEqualTo(Message::from.name, msg.from)
+            .whereEqualTo(Message::text.name, msg.text)
+            .whereEqualTo(Message::timestamp.name, msg.timestamp)
             .limit(1)
             .get()
             .addOnSuccessListener { msgRef ->
@@ -115,7 +115,7 @@ class ChatRepo @Inject constructor(val db: Database) : ChatDao {
                         mapOf(
                             Chat::lastSeenMessage.name to mapOf(
                                 currUserId to msgRef.documents[0].reference,
-                                otherUserId to (chat["lastSeenMessage"] as Map<String, DocumentReference?>)[otherUserId]
+                                otherUserId to (chat[Chat::lastSeenMessage.name] as Map<String, DocumentReference?>)[otherUserId]
                             )
                         ),
                         SetOptions.merge()

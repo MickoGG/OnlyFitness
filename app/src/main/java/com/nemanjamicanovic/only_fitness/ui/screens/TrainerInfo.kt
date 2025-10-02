@@ -215,15 +215,15 @@ fun TrainerInfo(
                                 modifier = Modifier.padding(top = 5.dp, start = 10.dp)
                             )
 
-                            Text(
-                                text = stringResource(id = R.string.trainer_info_certifications_licenses),
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(top = 15.dp, start = 10.dp)
-                            )
-                            Text(
-                                text = "Test",
-                                modifier = Modifier.padding(top = 5.dp, start = 10.dp, bottom = 10.dp)
-                            )
+//                            Text(
+//                                text = stringResource(id = R.string.trainer_info_certifications_licenses),
+//                                fontWeight = FontWeight.Bold,
+//                                modifier = Modifier.padding(top = 15.dp, start = 10.dp)
+//                            )
+//                            Text(
+//                                text = "Test",
+//                                modifier = Modifier.padding(top = 5.dp, start = 10.dp, bottom = 10.dp)
+//                            )
                         }
                     }
                 }
